@@ -4,7 +4,7 @@ const data = {
       name: 'Galaxy A03',
       slug: 'galaxy-a03',
       category: 'Smartphones',
-      image: '/images/p1.jpg',
+      image: '/images/p1.jpg', // 280px x 280px
       price: 39990.0,
       countInStock: 5,
       brand: 'Samsung',
