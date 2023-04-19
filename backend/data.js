@@ -47,8 +47,8 @@ const data = {
       price: 77990,
       countInStock: 1,
       brand: 'Samsung',
-      rating: 5.0,
-      numReviews: 13,
+      rating: 0.0,
+      numReviews: 2,
       description:
         '6.6″ FHD+ Display for Immersive Viewing Experience, Multi Role Quad Rear Camera with 50MP OIS main camera, 5,000mAh Long Lasting Battery for All Day Usage with 25W Fast Charging, 6GB RAM + 128GB ROM, With 06 Months Warranty.',
     },
