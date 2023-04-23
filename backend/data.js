@@ -1,7 +1,7 @@
 const data = {
   products: [
     {
-      _id: '1',
+      // _id: '1',
       name: 'Galaxy A03',
       slug: 'galaxy-a03',
       category: 'Smartphones',
@@ -15,7 +15,7 @@ const data = {
         '6.5” Display, 48 MP Camera, Octa-core Processor, 5000mAh Battery, With 06 Months Shop Warranty.',
     },
     {
-      _id: '2',
+      // _id: '2',
       name: 'Galaxy A03 Core',
       slug: 'galaxy-a03-core',
       category: 'Smartphones',
@@ -29,7 +29,7 @@ const data = {
         'Infinity – V Display 16.55cm (6.5″), Octa-core Processor, 5000mAh Battery, Main camera 8MP, Front Camera 5MP, With 2GB RAM + 32GB ROM, With 01 Year Company Warranty.',
     },
     {
-      _id: '3',
+      // _id: '3',
       name: 'Galaxy A13',
       slug: 'galaxy-a13',
       category: 'Smartphones',
@@ -43,7 +43,7 @@ const data = {
         '6.6-inch Infinity-V Display, Mobile photography with quad camera, Capture smaller details with a macro camera, Front camera, stylish selfies, An awesome battery that lasts two days, With 06 Months Shop Warranty.',
     },
     {
-      _id: '4',
+      // _id: '4',
       name: 'Galaxy A23',
       slug: 'galaxy-a23',
       category: 'Smartphones',
