@@ -93,7 +93,7 @@ function App() {
           </Container>
         </main>
         <footer>
-          <div className="text-center">All rights reserved</div>
+          <div className="text-center">© 2000-2023 Asian Communication</div>
         </footer>
       </div>
     </BrowserRouter>
