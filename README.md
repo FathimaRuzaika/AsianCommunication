@@ -149,4 +149,7 @@
     1. install node-check-updates
     2. ncu -u
     3. remove package-lock.json
-    4. npm install.
+    4. npm install
+35. Add Sidebar and Search Box
+    1. add sidebar
+    2. add search box
