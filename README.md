@@ -149,4 +149,4 @@
     1. install node-check-updates
     2. ncu -u
     3. remove package-lock.json
-    4. npm install
+    4. npm install.
