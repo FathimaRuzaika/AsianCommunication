@@ -145,3 +145,8 @@
     5. Create mongodb atlas database
     6. Set database connection in heroku env variables
     7. Commit and push
+34. Upgrade To React 18-Part(01)
+    1. install node-check-updates
+    2. ncu -u
+    3. remove package-lock.json
+    4. npm install
