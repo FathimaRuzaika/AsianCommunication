@@ -83,3 +83,20 @@ main {
 .text-bold {
   font-weight: bold;
 }
+.small-letter1 {
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.text-letters1 {
+  color: #a0a0a0;
+}
+.carousel {
+  height: 500px;
+  object-fit: cover;
+}
+.carousel-img {
+  height: 500px;
+}

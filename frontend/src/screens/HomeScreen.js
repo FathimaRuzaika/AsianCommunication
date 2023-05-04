@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 // import data from '../data';
+import Carousel from 'react-bootstrap/Carousel';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -48,6 +49,31 @@ function HomeScreen() {
       <Helmet>
         <title>Asian Communication</title>
       </Helmet>
+
+      <Carousel fade indicators={''} controls={''}>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 rounded carousel-img"
+            src="../images/asian1.gif"
+            alt="First slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 rounded carousel-img"
+            src="../images/asian2.gif"
+            alt="Second slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 rounded carousel-img"
+            src="../images/asian3.avif"
+            alt="Third slide"
+          />
+        </Carousel.Item>
+      </Carousel>
+
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (

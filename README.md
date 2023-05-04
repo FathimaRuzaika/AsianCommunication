@@ -159,3 +159,8 @@
     3. display results
 37. Upgrade To React 18-Part(02)
     1. fix LinkContainer error
+38. Some Styling-Part(01)
+    1. add favicon image
+    2. add logo in navigation bar
+    3. add fb link, contact details and location details in navigation bar
+    4. add banners in homescreen

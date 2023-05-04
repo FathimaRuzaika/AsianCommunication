@@ -73,12 +73,36 @@ function App() {
               </Button>
 
               <LinkContainer to="/">
-                <Navbar.Brand>Asian Communication</Navbar.Brand>
+                <Navbar.Brand>
+                  <img
+                    src="../images/logo.jpg"
+                    alt="logo"
+                    width={62}
+                    height={39}
+                  />
+                </Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <SearchBox />
                 <Nav className="me-auto  w-100  justify-content-end">
+                  <Nav.Item>
+                    <p className="text-letters1 mb-0 small-letter1 d-inline-flex justify-content-between flex-wrap">
+                      <a
+                        href="https://web.facebook.com/people/Asian-communication/100062520924876/"
+                        className="nav-link"
+                      >
+                        <i className="fab fa-facebook"></i>
+                      </a>
+                    </p>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <p className="text-letters1 mb-0 small-letter1 d-inline-flex justify-content-between flex-wrap">
+                      Fax: 065 225 7703, Mob: 077 900 2 900 | Location: Old
+                      Market Road, Oddamavadi, Sri
+                      Lanka.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
+                  </Nav.Item>
                   <Link to="/cart" className="nav-link">
                     Cart
                     {cart.cartItems.length > 0 && (
