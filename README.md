@@ -164,3 +164,7 @@
     2. add logo in navigation bar
     3. add fb link, contact details and location details in navigation bar
     4. add banners in homescreen
+39. Create Admin Menu
+    1. define protected route component
+    2. define admin route component
+    3. add menu for admin in header

@@ -50,7 +50,7 @@ function HomeScreen() {
         <title>Asian Communication</title>
       </Helmet>
 
-      <Carousel fade indicators={''} controls={''}>
+      <Carousel fade indicators={''} controls={''} className="mb-3">
         <Carousel.Item>
           <img
             className="d-block w-100 rounded carousel-img"
