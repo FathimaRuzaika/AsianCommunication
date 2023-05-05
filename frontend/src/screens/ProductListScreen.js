@@ -124,7 +124,7 @@ export default function ProductListScreen() {
         await axios.delete(`/api/products/${product._id}`, {
           headers: { Authorization: `Bearer ${userInfo.token}` },
         });
-        toast.success('product deleted successfully');
+        toast.success('Product deleted successfully');
         dispatch({ type: 'DELETE_SUCCESS' });
       } catch (err) {
         toast.error(getError(error));
