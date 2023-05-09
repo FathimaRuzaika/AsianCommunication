@@ -229,3 +229,5 @@
     4. set api key in env file
     5. change pay order in orderRouter
     6. send email order receipt
+54. Integrate AI Chatbot
+    1. Use OpenAI's GPT-3 API

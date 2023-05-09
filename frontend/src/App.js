@@ -33,6 +33,8 @@ import ProductEditScreen from './screens/ProductEditScreen';
 import OrderListScreen from './screens/OrderListScreen';
 import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
+import ChatScreen from './screens/ChatScreen';
+import ChatBoxIcon from './components/ChatBoxIcon';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -191,6 +193,7 @@ function App() {
               <Route path="/product/:slug" element={<ProductScreen />} />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/search" element={<SearchScreen />} />
+              <Route path="/chat" element={<ChatScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
               <Route
@@ -277,6 +280,9 @@ function App() {
             </Routes>
           </Container>
         </main>
+        <div>
+          <ChatBoxIcon />
+        </div>
         <footer>
           <div className="text-center">© 2000-2023 Asian Communication</div>
         </footer>
