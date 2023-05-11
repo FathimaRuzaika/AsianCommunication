@@ -231,3 +231,5 @@
     6. send email order receipt
 54. Integrate AI Chatbot
     1. Use OpenAI's GPT-3 API
+55. AI Query Search Autocomplete
+    1. Use Algolia's API

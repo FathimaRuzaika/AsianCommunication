@@ -35,6 +35,7 @@ import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
 import ChatScreen from './screens/ChatScreen';
 import ChatBoxIcon from './components/ChatBoxIcon';
+import Algapp from './components/AISearch/Searchapp';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -92,7 +93,9 @@ function App() {
                   />
                 </Navbar.Brand>
               </LinkContainer>
+
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Algapp />
               <Navbar.Collapse id="basic-navbar-nav">
                 <SearchBox />
                 <Nav className="me-auto  w-100  justify-content-end">
