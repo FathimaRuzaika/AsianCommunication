@@ -7,6 +7,8 @@
     "@algolia/autocomplete-js": "^1.9.2",
     "@algolia/autocomplete-plugin-query-suggestions": "^1.9.2",
     "@algolia/autocomplete-theme-classic": "^1.9.2",
+    "@algolia/recommend-react": "^1.8.1",
+    "@emotion/react": "^11.11.0",
     "@paypal/react-paypal-js": "^7.8.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Store } from '../Store';
 import { Helmet } from 'react-helmet-async';
 import Row from 'react-bootstrap/Row';
@@ -9,6 +9,63 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Rating from '../components/Rating';
+//import Badge from 'react-bootstrap/Badge';
+
+import { RelatedProducts } from '@algolia/recommend-react';
+import recommend from '@algolia/recommend';
+
+const recommendClient = recommend(
+  '8GNM3PIMWN', //Application ID
+  'ead73c8ee0af4efd071d851c4bf5f110' //Search-Only API Key
+);
+const indexName = 'AI_Product_Recommendations';
+
+// Define a custom class for the RelatedProducts component
+const relatedProductsClass = 'custom-related-products';
+
+function RelatedItem({ item }) {
+  return (
+    <Card
+      style={{
+        width: '14rem',
+        margin: '10px',
+      }}
+    >
+      <Link to={`/product/${item.slug}`}>
+        <Card.Img variant="top" src={item.image} alt={item.name} />
+      </Link>
+      <Card.Body>
+        <Link to={`/product/${item.slug}`}>
+          <Card.Title>{item.name}</Card.Title>
+        </Link>
+        <div style={{ display: 'flex' }}>
+          {' '}
+          <Rating rating={item.rating} numReviews={item.numReviews} />
+        </div>
+        <Card.Text>${item.price}</Card.Text>
+        <Card.Text>
+          {item.countInStock > 0 ? (
+            <Button variant="primary">Add to cart</Button>
+          ) : (
+            //<Badge bg="danger">Out of stock</Badge>
+            <span
+              style={{
+                marginTop: '23px',
+                marginBottom: '7px',
+                display: 'block',
+                //fontWeight: 'normal',
+                color: '#53575B',
+              }}
+            >
+              Out of stock
+            </span>
+          )}
+        </Card.Text>
+      </Card.Body>
+    </Card>
+  );
+}
 
 export default function CartScreen() {
   const navigate = useNavigate();
@@ -16,6 +73,13 @@ export default function CartScreen() {
   const {
     cart: { cartItems },
   } = state;
+
+  const [currentObjectID, setCurrentObjectID] = useState(null);
+  useEffect(() => {
+    if (cartItems.length > 0) {
+      setCurrentObjectID(cartItems[0]._id); // Set the current object ID to the ID of the first item in the cart
+    }
+  }, [cartItems]);
 
   const updateCartHandler = async (item, quantity) => {
     const { data } = await axios.get(`/api/products/${item._id}`);
@@ -125,6 +189,65 @@ export default function CartScreen() {
           </Card>
         </Col>
       </Row>
+
+      {/* AI Product Recommendations............................................................... */}
+      {cartItems.length > 0 && (
+        <div className="related-products-container">
+          <h1 className="related-products-title">You May Also Like</h1>
+          {currentObjectID && (
+            <RelatedProducts
+              recommendClient={recommendClient}
+              indexName={indexName}
+              objectIDs={[currentObjectID]}
+              classNames={{
+                list: relatedProductsClass, // Assign the custom class to the list
+                //list: 'd-flex flex-row gap-2',
+                title: 'invisible',
+                //item: 'w-10 h-10',
+              }}
+              itemComponent={RelatedItem}
+              transformItems={
+                (items) =>
+                  items
+                    .filter(
+                      (item) =>
+                        !cartItems.find(
+                          (cartItem) => cartItem._id === item.objectID
+                        )
+                    )
+                    .slice(0, 5) // Limit the number of items to 5
+              }
+            />
+          )}
+        </div>
+      )}
+      {/* Add the style tag here */}
+      <style>
+        {`
+        .related-products-container {
+         margin-left: -42px;  // Adjust the left margin to reduce the space         
+        }   
+        
+        .related-products-title {          
+          margin-bottom: -45px; // Add some spacing between the title and the related products list 
+          margin-top: 0px;         
+          margin-left: 42px;          
+        }
+        
+        .${relatedProductsClass} {
+          display: flex;           // Display the list items in a row
+          gap: 10px;               // Add a small gap between the items
+          overflow-x: auto;        // Enable horizontal scrolling if needed
+          white-space: nowrap;     // Prevent line breaks between items          
+        }
+        
+        .${relatedProductsClass} li {
+          display: inline-block;   // Display the list items as inline-block elements
+          list-style-type: none;  // Removes the default bullet or number list-style from the list items
+        }
+        `}
+      </style>
+      {/* ......................................................................................... */}
     </div>
   );
 }

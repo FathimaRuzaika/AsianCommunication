@@ -1,3 +1,29 @@
+Run Locally
+
+1. Run Backend
+   $ cd backend
+   $ npm install
+   $ npm start
+
+2. Run Frontend
+
+# open new terminal
+
+$ cd frontend
+$ npm install
+$ npm start
+
+3. Admin Login
+   Run http://localhost:3000/signin
+   Enter admin email and password and click signin
+
+Support
+Contact Instructor: Ruzaika
+
+Or..................
+
+Deployed To Heroku (Link): https://asian-communication.herokuapp.com/
+
 # Asian Communication
 
 # Works Done
@@ -233,3 +259,6 @@
     1. Use OpenAI's GPT-3 API
 55. AI Query Search Autocomplete
     1. Use Algolia's API
+56. AI Product Recommendations
+    1. Use Algolia's API
+    2. Use 'Related products' Model
