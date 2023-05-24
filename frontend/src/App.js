@@ -23,7 +23,7 @@ import ProfileScreen from './screens/ProfileScreen';
 import Button from 'react-bootstrap/Button';
 import { getError } from './utils';
 import axios from 'axios';
-import SearchBox from './components/SearchBox';
+
 import SearchScreen from './screens/SearchScreen';
 import ProtectedRoute from './components/ProtectedRoute';
 import DashboardScreen from './screens/DashboardScreen';
@@ -35,7 +35,7 @@ import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
 import ChatScreen from './screens/ChatScreen';
 import ChatBoxIcon from './components/ChatBoxIcon';
-import Algapp from './components/AISearch/Searchapp';
+import AutocompleteSearchBox from './components/AutocompleteSearchBox';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -95,9 +95,9 @@ function App() {
               </LinkContainer>
 
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Algapp />
+
               <Navbar.Collapse id="basic-navbar-nav">
-                <SearchBox />
+                <AutocompleteSearchBox />
                 <Nav className="me-auto  w-100  justify-content-end">
                   <Nav.Item>
                     <p className="text-letters1 mb-0 small-letter1 d-inline-flex justify-content-between flex-wrap">

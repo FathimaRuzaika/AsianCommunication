@@ -100,3 +100,7 @@ main {
 .carousel-img {
   height: 500px;
 }
+.algcontainer {
+  width: 233px;
+  /*border: 1px solid rgb(236, 7, 7);*/
+}

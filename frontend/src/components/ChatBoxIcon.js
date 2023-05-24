@@ -14,7 +14,7 @@ export default function ChatBoxIcon() {
             position: 'fixed',
             bottom: '20px',
             right: '20px',
-            zIndex: '9999',
+            zIndex: '9999', //set the position infront of all the elements by setting up a higher ZIndex value
           }}
         />
       </Link>

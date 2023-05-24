@@ -50,7 +50,13 @@ function HomeScreen() {
         <title>Asian Communication</title>
       </Helmet>
 
-      <Carousel fade indicators={''} controls={''} className="mb-3">
+      <Carousel
+        fade
+        indicators={''}
+        controls={''}
+        className="mb-3"
+        style={{ zIndex: 0 }} //set the lowest ZIndex value to show behind all other elements
+      >
         <Carousel.Item>
           <img
             className="d-block w-100 rounded carousel-img"
