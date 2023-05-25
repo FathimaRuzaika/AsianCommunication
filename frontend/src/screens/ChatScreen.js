@@ -5,7 +5,11 @@ import { Helmet } from 'react-helmet-async';
 export default function ChatScreen() {
   const [data, setData] = useState([]);
 
+  //..............................................................
+  // const apiKey = 'xxxxxxxxxxxxxxxxxxxxxx';
+  // Or
   const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
+  //..............................................................
 
   const apiUrl =
     'https://api.openai.com/v1/engines/text-davinci-003/completions';
