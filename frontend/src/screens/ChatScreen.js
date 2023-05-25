@@ -5,7 +5,6 @@ import { Helmet } from 'react-helmet-async';
 export default function ChatScreen() {
   const [data, setData] = useState([]);
 
-  // const apiKey = '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';
   const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
 
   const apiUrl =
