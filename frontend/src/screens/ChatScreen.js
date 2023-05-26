@@ -16,7 +16,7 @@ export default function ChatScreen() {
   const [textInput, setTextInput] = useState('');
 
   const handleSend = async () => {
-    const prompt = textInput;
+    const prompt = `E-commerce: ${textInput}`; // Add a prefix to the prompt for e-commerce context
     let responseText;
 
     // Check input text and generate response accordingly.....................................................
@@ -160,6 +160,7 @@ export default function ChatScreen() {
     }
     //...........................................................................................................................................................
     else {
+      // Call the Davinci model for generating responses
       const response = await axios.post(
         apiUrl,
         {
