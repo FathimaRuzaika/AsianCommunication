@@ -262,3 +262,7 @@ Deployed To Heroku (Link): https://asian-communication.herokuapp.com/
 56. AI Product Recommendations
     1. Use Algolia's API
     2. Use 'Related products' Model
+57. Review Orders
+    1. create submit review form
+    2. handle submit
+    3. implement backend api for review

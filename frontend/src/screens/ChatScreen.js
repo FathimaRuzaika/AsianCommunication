@@ -6,7 +6,7 @@ export default function ChatScreen() {
   const [data, setData] = useState([]);
 
   //..............................................................
-  // const apiKey = 'xxxxxxxxxxxxxxxxxxxxxx';
+  //const apiKey = 'xxxxxx';
   // Or
   const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
   //..............................................................
