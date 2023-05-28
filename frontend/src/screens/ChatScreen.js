@@ -6,7 +6,7 @@ export default function ChatScreen() {
   const [data, setData] = useState([]);
 
   //..............................................................
-  //const apiKey = 'xxxxxx';
+  //const apiKey = 'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
   // Or
   const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
   //..............................................................
@@ -16,7 +16,7 @@ export default function ChatScreen() {
   const [textInput, setTextInput] = useState('');
 
   const handleSend = async () => {
-    const prompt = `E-commerce: ${textInput}`; // Add a prefix to the prompt for e-commerce context
+    const prompt = textInput;
     let responseText;
 
     // Check input text and generate response accordingly.....................................................
